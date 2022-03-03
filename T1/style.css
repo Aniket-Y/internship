@@ -62,9 +62,29 @@ form .txt_field{
   color: #adadad;
   transform: translateY(-50%);
   font-size: 16px;
+  transition: .5s;
   
 }
+span .befre::before {
+  content:'';
+  position:absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
 
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+.txt_field input:focus ~ span .befre::before,
+.txt_field input:valid ~  span .befre::before{
+  width: 100%;
+}
 input[type="submit"]{
   width: 100%;
   height: 50px;
@@ -76,6 +96,10 @@ input[type="submit"]{
   font-weight: 700;
   cursor: pointer;
   outline: none;
+}
+input[type="submit"]:hover{
+   background: linear-gradient(to left,#BD50D8,#7022BE);
+   transition: .25s;
 }
 
 .signup_link{
