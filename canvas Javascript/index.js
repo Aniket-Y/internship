@@ -4,8 +4,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 function rect() {
-  const gtc = canvas.getContext("2d");
-  gtc.clearRect(0, 0, canvas.width, canvas.height);
+
   let input = document.querySelector("input");
   let x = 10;
   let y = 100;
@@ -28,16 +27,31 @@ class Rectangle {
     this.w = width;
     this.h = height;
     this.c = canvas.getContext("2d");
-    this.c.fillStyle = "rgba(255,255,255,.8)";
+    this.c.fillStyle = "orange";
     this.c.lineWidth = 4;
-    this.c.strokeStyle = 'pink';
+    
     this.c.fillRect(this.x, this.y, this.w, this.h);
-    this.c.stroke()
     this.c.fillStyle = "black";
+    this.c.stroke(); 
+    
     this.c.font = "bold 9pt Verdana";
     this.c.textAlign = "center";
     this.text = `[${this.x.toFixed(2)}, ${this.y.toFixed(2)}]`;
     this.c.fillText(this.text, this.x + this.w / 2, this.y + this.h / 2);
-    this.c.fillStyle = "rgba(255,255,255,.8)";
+    this.c.fillStyle = "rgba(255,0,255,.8)";
+    this.c.fillRect(
+      this.x + this.w / 2 - this.h / 4,
+      this.y - this.h / 4,
+      this.w / 4,
+      this.h / 4
+    );
+
+    this.c.fillRect(
+      this.x + this.w / 2 - this.h / 4,
+      this.y + this.h,
+      this.w / 4,
+      this.h / 4
+    );
+    
   }
 }
