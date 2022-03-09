@@ -5,6 +5,8 @@ canvas.height = window.innerHeight;
 
 function rect() {
 
+  const gtc = canvas.getContext("2d");
+  gtc.clearRect(0, 0, canvas.width, canvas.height);
   let input = document.querySelector("input");
   let x = 10;
   let y = 100;
