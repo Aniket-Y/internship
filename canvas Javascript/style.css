@@ -1,0 +1,32 @@
+canvas{
+    border: 1px solid darkblue;
+    background-color: skyblue;
+    width: 100%;
+    height: 99.7vh;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+div{
+    position: absolute;
+}
+div input{
+    padding: 8px 10px ;
+    margin: 10px ;
+    border-radius: 5px;
+    border: 2px solid rgb(56, 46, 46);
+
+}
+div button{
+    padding: 5px 10px ;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 2px gray solid;
+    
+    
+
+}
